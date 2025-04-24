@@ -8,10 +8,11 @@ import co.edu.sena.examplejpa.model.KeyRoom;
 import java.util.List;
 
 /**
- *
- * @author eSTEBAN 
+ * DATE: 08/04/2025
+ * @author Esteban Colorado Vargas
+ * Objetivo: implementar DAO para modelo de Key. 
  */
-public class KeyDAO implements IKeyDAO{
+public class KeyRoomDAO implements IKeyRoomDAO{
 
     @Override
     public void insert(KeyRoom keyRoom) throws Exception {
@@ -52,7 +53,7 @@ public class KeyDAO implements IKeyDAO{
     @Override
     public List<KeyRoom> findAll() throws Exception {
         try {
-            return EntityManagerHelper.getEntityManager().createNamedQuery("KeyRoom.findAlll").getResultList();
+            return EntityManagerHelper.getEntityManager().createNamedQuery("KeyRoom.findAll").getResultList();
         } catch (RuntimeException e) {
             throw e;
         }
